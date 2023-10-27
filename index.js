@@ -19,7 +19,7 @@ const mailOptions = {
 transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
         console.error(error);
-        res.status(500).send(
+        res.status(500).json(
             JSON.stringify({
                 status: "failed",
                 data: {
@@ -29,7 +29,7 @@ transporter.sendMail(mailOptions, (error, info) => {
         );
     } else {
         console.log("Email sent: " + info.response);
-        res.status(200).send(
+        res.status(200).json(
             JSON.stringify({
                 status: "success",
                 data: {
