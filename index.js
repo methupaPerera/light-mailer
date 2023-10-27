@@ -1,41 +1,46 @@
 const nodemailer = require("nodemailer");
 
-const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-        user: "methupapereradev@gmail.com",
-        pass: "cgakgveeihuicrzu",
-    },
-});
-
-const mailOptions = {
-    from: "methupapereradev@gmail.com",
-    to: "methupapereradev@gmail.com",
-    subject: "New Contact Message.",
-    html: replacer(template, name, email, message),
-};
-
-// Send the email
-transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-        console.error(error);
-        res.status(500).send(
-            JSON.stringify({
-                status: "failed",
-                data: {
-                    message: "Failed to send email !",
-                },
-            })
-        );
-    } else {
-        console.log("Email sent: " + info.response);
-        res.status(200).send(
-            JSON.stringify({
-                status: "success",
-                data: {
-                    message: "Email sent !",
-                },
-            })
-        );
+class Mailer {
+    constructor(email, password, from, to) {
+        this.email = email;
+        this.password = password;
+        this.from = from;
+        this.to = to;
     }
-});
+
+    htmlReplacer(data, template) {
+        for (const key in data) {
+            console.log(key);
+            template = template.replace(`{{${key}}}`, data[key]);
+        }
+        console.log(template);
+        return template;
+    }
+
+    sendMail(data, template) {
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            auth: {
+                user: this.email,
+                pass: this.password,
+            },
+        });
+
+        const mailOptions = {
+            from: this.from,
+            to: this.to,
+            subject: "New Contact Message.",
+            html: this.htmlReplacer(data, template),
+        };
+
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.error(error);
+            } else {
+                console.log("Email sent: " + info.response);
+            }
+        });
+    }
+}
+
+module.exports = Mailer;
