@@ -1,6 +1,6 @@
 {
     "name": "light-mailer",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "You can use this automated version of nodemailer to send emails easily.",
     "main": "index.js",
     "scripts": {
