@@ -18,6 +18,12 @@ app.post("/send-mail", (req, res) => {
         "methupapereradev@gmail.com"
     );
     mail.sendMail(data, template);
+    res.status(200).json({
+        status: "success",
+        data: {
+            message: "Email sent successfully!",
+        },
+    });
 });
 
 app.listen(PORT, (req, res) => {

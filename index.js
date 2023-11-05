@@ -10,7 +10,6 @@ class Mailer {
 
     htmlReplacer(data, template) {
         for (const key in data) {
-            console.log(key);
             template = template.replace(`{{${key}}}`, data[key]);
         }
         console.log(template);

@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/methupaPerera/easy-mailer"
+        "url": "git+https://github.com/methupaPerera/easy-mailer.git"
     },
     "keywords": [
         "easy-mailer",
@@ -20,5 +20,13 @@
     "dependencies": {
         "express": "^4.18.2",
         "nodemailer": "^6.9.7"
-    }
+    },
+    "bugs": {
+        "url": "https://github.com/methupaPerera/easy-mailer/issues"
+    },
+    "homepage": "https://github.com/methupaPerera/easy-mailer#readme",
+    "directories": {
+        "test": "test"
+    },
+    "devDependencies": {}
 }
