@@ -89,11 +89,11 @@ app.post("/send-mail", (req, res) => {
 
 You can check if the API works using Postman like this: <br><br>
 
-<img src="https://github.com/methupaPerera/light-mailer/assets/108886352/3d407f74-8bdc-424f-9dff-21932e908b94">
+![280512501-3d407f74-8bdc-424f-9dff-21932e908b94](https://github.com/methupaPerera/light-mailer/assets/108886352/b593335e-8468-461f-9e9e-52d597c07b27)
 <br><br>
 
 The result should look like this: <br><br>
-<img src="https://github.com/methupaPerera/light-mailer/assets/108886352/18b947f4-0516-4954-ae50-d525e074a3a0">
+![280512870-18b947f4-0516-4954-ae50-d525e074a3a0](https://github.com/methupaPerera/light-mailer/assets/108886352/ec670832-e574-4c91-aed9-db228c2d55da)
 
 ## License
 
