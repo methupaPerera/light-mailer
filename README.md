@@ -1,6 +1,6 @@
 # Light Mailer
 
-You can use this automated version of Nodemailer to send emails easily.
+You can use this automated version of Nodemailer to send emails easily. All you have to do is create a REST API and make a request to it using a frontend with the necessary data which you want to send in the email.
 
 ## Installation
 
@@ -26,7 +26,7 @@ Next, create an email template and import it like this:
 const template = fs.readFileSync("./template.html", "utf8");
 ```
 
-The email template must include placeholders with the exact names of the keys of the JavaScript object. In this case, the email template will look like this:
+The email template must include placeholders with the exact names of the keys of the JavaScript object which you receive in the request body. In this case, the email template will look like this:
 
 ```
 <!DOCTYPE html>
@@ -82,17 +82,16 @@ app.post("/send-mail", (req, res) => {
     });
 });
 ```
-<br>
 
-> If you can't see the images, please visit the GitHub repository and read the README file.
-<br>
-You can check if the API works using Postman like this: <br><br>
+You can check if the API works using Postman. Just make a POST request to the following link: `127.0.0.1:4000/send-mail/` and add the JSON object below to the request body.
+```
+{
+    "name": "Example",
+    "message": "Hello World!"
+}
+```
 
-![280512501-3d407f74-8bdc-424f-9dff-21932e908b94](https://github.com/methupaPerera/light-mailer/assets/108886352/b593335e-8468-461f-9e9e-52d597c07b27)
-<br><br>
-
-The result should look like this: <br><br>
-![280512870-18b947f4-0516-4954-ae50-d525e074a3a0](https://github.com/methupaPerera/light-mailer/assets/108886352/ec670832-e574-4c91-aed9-db228c2d55da)
+Afterward, check the recipient's email address that you provided when creating the lightMailer instance.
 
 ## License
 
