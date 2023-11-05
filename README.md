@@ -86,7 +86,11 @@ app.post("/send-mail", (req, res) => {
     });
 });
 ```
+<br>
 
+> If you cant see the images, please visit the github repository and read the README file.
+
+<br>
 You can check if the API works using Postman like this: <br><br>
 
 ![280512501-3d407f74-8bdc-424f-9dff-21932e908b94](https://github.com/methupaPerera/light-mailer/assets/108886352/b593335e-8468-461f-9e9e-52d597c07b27)
