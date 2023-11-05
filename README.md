@@ -2,6 +2,14 @@
 
 You can use this automated version of Nodemailer to send emails easily. All you have to do is create a REST API and make a request to it using a frontend with the necessary data which you want to send in the email.
 
+## Why Light Mailer
+
+- Easy to use.
+- No any advanced configurations. (Configured everything in nodemailer for you.)
+- Best for small projects.
+
+
+
 ## Installation
 
 You can install this package using npm:
@@ -65,6 +73,7 @@ After that, you can get the data that you want to send as an email from the requ
 ```
 app.post("/send-mail", (req, res) => {
     const data = req.body;
+
     const mail = new lightMailer(
         "your-gmail@gmail.com",
         "your-gmail-password",
@@ -82,6 +91,8 @@ app.post("/send-mail", (req, res) => {
     });
 });
 ```
+
+> Please make sure that your email address doesn't have two-factor authentication activated.
 
 You can check if the API works using Postman. Just make a POST request to the following link: `127.0.0.1:4000/send-mail/` and add the JSON object below to the request body.
 ```
