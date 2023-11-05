@@ -1,5 +1,5 @@
 {
-    "name": "easy-mailing",
+    "name": "light-mailer",
     "version": "1.0.0",
     "description": "You can use this automated version of nodemailer to send emails easily.",
     "main": "index.js",
@@ -11,8 +11,7 @@
         "url": "git+https://github.com/methupaPerera/easy-mailer.git"
     },
     "keywords": [
-        "easy-mailer",
-        "emailer",
+        "light-mailer",
         "nodemailer"
     ],
     "author": "Methupa Perera",
