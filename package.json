@@ -1,5 +1,5 @@
 {
-    "name": "easy-mailer",
+    "name": "easy-mailing",
     "version": "1.0.0",
     "description": "You can use this automated version of nodemailer to send emails easily.",
     "main": "index.js",
