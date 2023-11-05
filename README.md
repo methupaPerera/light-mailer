@@ -20,6 +20,8 @@ npm install light-mailer
 
 ## Usage
 
+### Quick Tutorial
+
 First import necessary modules into your project:
 
 ```
@@ -103,6 +105,19 @@ You can check if the API works using Postman. Just make a POST request to the fo
 ```
 
 Afterward, check the recipient's email address that you provided when creating the lightMailer instance.
+<br><br>
+This is the end of the quick tutorial.
+
+## Functions & Parameters
+
+> These functions include the lightMailer function, which was created in the quick tutorial. Note that you can use any name for that!
+
+| Function | Parameters |
+|----------|----------|
+| lightMailer | Email, Password, Sender's email, Receiver's email |
+| sendMail | data, template |
+
+
 
 ## License
 
