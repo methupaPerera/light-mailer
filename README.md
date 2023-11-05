@@ -28,13 +28,13 @@ const express = require("express");
 const fs = require("fs");
 ```
 
-Next, create an email template and import it like this:
+Next, create an email template and read its content like this:
 
 ```
 const template = fs.readFileSync("./template.html", "utf8");
 ```
 
-The email template must include placeholders with the exact names of the keys of the JavaScript object which you receive in the request body. In this case, the email template will look like this:
+The email template must include placeholders with the exact names of the keys of the JavaScript object which you receive in the request body. (Please declare the placeholders like this: `{{}}` ) In this case, the email template will look like this:
 
 ```
 <!DOCTYPE html>
