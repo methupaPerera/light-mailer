@@ -1,6 +1,6 @@
 # Light Mailer
 
-You can use this automated version of nodemailer to send emails easily.
+You can use this automated version of Nodemailer to send emails easily.
 
 ## Installation
 
@@ -20,14 +20,13 @@ const express = require("express");
 const fs = require("fs");
 ```
 
-Next create a email template and import it like this:
+Next, create an email template and import it like this:
 
 ```
 const template = fs.readFileSync("./template.html", "utf8");
 ```
 
-The email template must include placeholders with the exact names of the keys of the JavaScript object. <br>
-In this case, the email template will look like this:
+The email template must include placeholders with the exact names of the keys of the JavaScript object. In this case, the email template will look like this:
 
 ```
 <!DOCTYPE html>
@@ -44,7 +43,7 @@ In this case, the email template will look like this:
 </html>
 ```
 
-Then create a REST API using ExpressJS and add the API endpoint "/send-mail" as follows:
+Then create a REST API using Express.js and add the API endpoint "/send-mail" as follows:
 
 ```
 const app = express();
@@ -61,10 +60,7 @@ app.listen(PORT, (req, res) => {
 });
 ```
 
-After that, you can get the data which you want to send as an email from the request body.
-Next create a new instance of lightMailer with the necessary arguments.
-Then call the sendmail function with the data which you want to send as an email and the email template.
-Finally write the response as follows.
+After that, you can get the data that you want to send as an email from the request body. Next, create a new instance of lightMailer with the necessary arguments. Then call the sendMail function with the data that you want to send as an email and the email template. Finally, write the response as follows:
 
 ```
 app.post("/send-mail", (req, res) => {
@@ -88,8 +84,7 @@ app.post("/send-mail", (req, res) => {
 ```
 <br>
 
-> If you cant see the images, please visit the github repository and read the README file.
-
+> If you can't see the images, please visit the GitHub repository and read the README file.
 <br>
 You can check if the API works using Postman like this: <br><br>
 
