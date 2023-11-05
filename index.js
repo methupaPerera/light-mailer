@@ -1,22 +1,25 @@
 const nodemailer = require("nodemailer");
 
-class Mailer {
+class LightMailer {
     constructor(email, password, from, to) {
-        this.email = email;
-        this.password = password;
-        this.from = from;
-        this.to = to;
+        this.email = email; // User email
+        this.password = password; // User password
+        this.from = from; // Sender's email
+        this.to = to; // Receiver's email
     }
 
     htmlReplacer(data, template) {
+        // Replace the html code according to the data of 
+        // request body.
         for (const key in data) {
             template = template.replace(`{{${key}}}`, data[key]);
         }
-        console.log(template);
         return template;
     }
 
     sendMail(data, template) {
+        // Automation function of the nodemailer.
+        // This will send the email with the email template.
         const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
@@ -42,4 +45,4 @@ class Mailer {
     }
 }
 
-module.exports = Mailer;
+module.exports = LightMailer;
