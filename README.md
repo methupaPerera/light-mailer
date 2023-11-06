@@ -1,6 +1,6 @@
 # Light Mailer
 
-You can use this automated version of Nodemailer to send emails easily. All you have to do is create a REST API and make a request to it using a frontend with the necessary data which you want to send in the email.
+You can utilize this automated version of Nodemailer to easily send emails. All you need to do is create a REST API by integrating Light Mailer and then make a request to it using a frontend, including the necessary data you want to send in the email.
 
 ## Why Light Mailer
 
@@ -96,7 +96,7 @@ app.post("/send-mail", (req, res) => {
 
 > Please make sure that your email address doesn't have two-factor authentication activated.
 
-You can check if the API works using Postman. Just make a POST request to the following link: `127.0.0.1:4000/send-mail/` and add the JSON object below to the request body.
+You can check if the API works using Postman. Just make a POST request to the following link: `127.0.0.1:4000/send-mail` and add the JSON object below to the request body.
 ```
 {
     "name": "Example",
