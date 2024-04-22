@@ -8,20 +8,12 @@ class LightMailer {
         this.to = to; // Receiver's email
     }
 
-    htmlReplacer(data, template) {
-        // Replace the html code according to the data of 
-        // request body.
-        for (const key in data) {
-            template = template.replace(`{{${key}}}`, data[key]);
-        }
-        return template;
-    }
-
-    sendMail(data, template) {
-        // Automation function of the nodemailer.
-        // This will send the email with the email template.
+    async sendMail(data, template, subject = "Subject...") {
         const transporter = nodemailer.createTransport({
             service: "gmail",
+            host: "smtp.gmail.com",
+            port: 587,
+            secure: false,
             auth: {
                 user: this.email,
                 pass: this.password,
@@ -31,17 +23,24 @@ class LightMailer {
         const mailOptions = {
             from: this.from,
             to: this.to,
-            subject: "New Contact Message.",
+            subject,
             html: this.htmlReplacer(data, template),
         };
 
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                console.error(error);
-            } else {
-                console.log("Email sent: " + info.response);
-            }
-        });
+        const info = await transporter.sendMail(mailOptions);
+
+        if (info instanceof Promise) {
+            throw new Error(info);
+        }
+    }
+
+    htmlReplacer(data, template) {
+        // Replace the html code according to the data of request body.
+        for (const key in data) {
+            template = template.replace(`{{${key}}}`, data[key]);
+        }
+
+        return template;
     }
 }
 
