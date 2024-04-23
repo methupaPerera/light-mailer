@@ -3,7 +3,7 @@ const nodemailer = require("nodemailer");
 class LightMailer {
     constructor(email, password, from, to) {
         this.email = email; // User email
-        this.password = password; // User password
+        this.password = password; // User app password
         this.from = from; // Sender's email
         this.to = to; // Receiver's email
     }
