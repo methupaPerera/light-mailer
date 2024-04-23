@@ -1,6 +1,6 @@
 {
     "name": "light-mailer",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "You can use this automated version of nodemailer to send emails easily.",
     "main": "index.js",
     "scripts": {
@@ -8,11 +8,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/methupaPerera/easy-mailer.git"
+        "url": "git+https://github.com/methupaPerera/light-mailer.git"
     },
     "keywords": [
         "light-mailer",
-        "nodemailer"
+        "nodemailer",
+        "emailers"
     ],
     "author": "Methupa Perera",
     "license": "MIT",
@@ -21,11 +22,8 @@
         "nodemailer": "^6.9.7"
     },
     "bugs": {
-        "url": "https://github.com/methupaPerera/easy-mailer/issues"
+        "url": "https://github.com/methupaPerera/light-mailer/issues"
     },
-    "homepage": "https://github.com/methupaPerera/easy-mailer#readme",
-    "directories": {
-        "test": "test"
-    },
+    "homepage": "https://github.com/methupaPerera/light-mailer#readme",
     "devDependencies": {}
 }

@@ -1,10 +1,9 @@
 const nodemailer = require("nodemailer");
 
 class LightMailer {
-    constructor(email, password, from, to) {
+    constructor(email, password, to) {
         this.email = email; // User email
         this.password = password; // User app password
-        this.from = from; // Sender's email
         this.to = to; // Receiver's email
     }
 
@@ -21,7 +20,7 @@ class LightMailer {
         });
 
         const mailOptions = {
-            from: this.from,
+            from: this.email,
             to: this.to,
             subject,
             html: this.htmlReplacer(data, template),

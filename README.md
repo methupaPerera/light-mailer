@@ -8,8 +8,6 @@ You can utilize this automated version of Nodemailer to easily send emails. All 
 - No any advanced configurations. (Configured everything in nodemailer for you.)
 - Best for small projects.
 
-
-
 # Installation
 
 You can install this package using npm:
@@ -79,7 +77,6 @@ app.post("/send-mail", async (req, res) => {
     const mail = new lightMailer(
         "your-gmail@gmail.com",
         "your-gmail-app-password",
-        "sender's-gmail@gmail.com",
         "receiver's-gmail@gmail.com"
     );
 
@@ -123,9 +120,8 @@ This is the end of the quick tutorial.
 
 | Function | Parameters |
 |----------|----------|
-| lightMailer | Email, Password, Sender's email, Receiver's email |
+| lightMailer | Sender's email, Password,  Receiver's email |
 | sendMail | data, template |
-
 
 # Changelog
 
@@ -140,7 +136,6 @@ All notable changes to this project will be documented in this section.
 
 ## [1.0.8]
 - Initially Released
-
 
 ## License
 
