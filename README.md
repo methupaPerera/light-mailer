@@ -127,6 +127,10 @@ This is the end of the quick tutorial.
 
 All notable changes to this project will be documented in this section.
 
+## [1.2.2] - 2024-04-23
+### Changed
+- Minor bug fixes
+
 ## [1.2.0] - 2024-04-22
 ### Changed
 - Improved error handling
